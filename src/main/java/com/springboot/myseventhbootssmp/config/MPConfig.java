@@ -9,9 +9,10 @@ import org.springframework.context.annotation.Configuration;
 public class MPConfig {
     @Bean
     public MybatisPlusInterceptor mpInterceptor() {
-//        定义MP拦截器
+//        创建一个 MyBatis-Plus 的总拦截器对象。
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
-//        添加具体的拦截器
+//        添加具体的拦截器，分页功能的拦截器
+//        分页拦截器就会在 SQL 执行前介入，把普通查询改造成分页查询
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor());
         return interceptor;
     }
