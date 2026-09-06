@@ -12,5 +12,6 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+#      开启MP日志
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
