@@ -1,3 +1,5 @@
+//统一响应结果类
+
 package com.springboot.myseventhbootssmp.controller.utils;
 
 import lombok.Data;
@@ -6,6 +8,7 @@ import lombok.Data;
 public class R {
     private boolean flag;
     private Object data;
+    private String msg;
 
     public R (){}
 
@@ -16,5 +19,15 @@ public class R {
     public R (Boolean flag,Object data){
         this.flag = flag;
         this.data = data;
+    }
+
+    public R(boolean flag, String msg) {
+        this.flag = flag;
+        this.msg = msg;
+    }
+
+    public R(String msg) {
+        this.flag = false;
+        this.msg = msg;
     }
 }
