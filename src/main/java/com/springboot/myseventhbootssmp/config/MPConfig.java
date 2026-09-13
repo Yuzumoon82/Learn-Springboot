@@ -1,3 +1,5 @@
+//MyBatis-Plus 分页配置
+
 package com.springboot.myseventhbootssmp.config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;

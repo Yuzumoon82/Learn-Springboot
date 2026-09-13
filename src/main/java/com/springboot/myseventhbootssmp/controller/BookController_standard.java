@@ -1,3 +1,5 @@
+//早期/标准版 Controller，当前未启用
+
 package com.springboot.myseventhbootssmp.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -42,6 +44,6 @@ public class BookController_standard {
 
     @GetMapping
     public IPage<Book> getPage(@PathVariable int currentPage,@PathVariable int pageSize){
-        return iBookService.getPage(currentPage,pageSize);
+        return iBookService.getPage(currentPage,pageSize, null);
     }
 }
